@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth', 'role: 1']], function(){
     Route::resource('mapels', MapelController::class);
 
     //Route Jadwal
+    Route::resource('jadwals', JadwalController::class);
 
     //Route Kelas
     Route::resource('kelas', KelasController::class);

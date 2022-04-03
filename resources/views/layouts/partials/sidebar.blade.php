@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Toto Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Sistem Informasi</div>
     </a>
 
     <!-- Divider -->
@@ -30,15 +30,22 @@
          <!-- Nav Item - Tables -->
         <li class="nav-item {{ Request::is('gurus*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('gurus.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-user-md"></i>
                 <span>Guru</span></a>
         </li>
 
         <li class="nav-item {{ Request::is('siswas*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('siswas.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-solid fa-graduation-cap"></i>
                 <span>Siswa</span></a>
         </li>
+
+        <li class="nav-item {{ Request::is('jadwal*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('jadwals.index') }}">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Jadwal</span></a>
+        </li>
+
         <li class="nav-item {{ Request::is('kelas*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('kelas.index') }}">
                 <i class="fas fa-fw fa-table"></i>

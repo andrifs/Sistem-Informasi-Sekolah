@@ -16,7 +16,7 @@ Sistem Informasi Sekolah
 
 # ERD
 
-<p align="center"><img src="public/assets/img/ERD.png" width="400"></p>
+<p align="center"><img src="public/assets/img/ERD2.png" width="400"></p>
 
 # Link Video
 

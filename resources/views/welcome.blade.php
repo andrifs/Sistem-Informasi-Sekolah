@@ -69,7 +69,11 @@
             <div class="content container">
                 <div class="title m-b-md">
                     Sistem Informasi Sekolah
-                    <h2 class="font-italic">{!! $content->isi_konten !!}</h2>
+                    @if ($content)
+                        <h2 class="font-italic">{!! $content->isi_konten !!}</h2>
+                    @else
+                        <h2 class="font-italic">"Jika kamu tidak sanggup menahan lelahnya belajar maka kamu harus sanggup menahan perihnya kebodohan"-Imam Syafi-i</h2>
+                    @endif
                 </div>
                 <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
             </div>

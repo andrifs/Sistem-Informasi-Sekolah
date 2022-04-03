@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\guru;
+use App\siswa;
+use App\kelas;
+use App\jadwal;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $guru = guru::all();
+        $siswa = siswa::all();
+        $kelas = kelas::all();
+        $jadwal = jadwal::latest()->paginate(5);
+        return view('home', compact('guru', 'siswa', 'kelas', 'jadwal'));
     }
 }

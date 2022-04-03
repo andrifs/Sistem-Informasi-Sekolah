@@ -39,7 +39,7 @@ class ProfileSiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -73,7 +73,7 @@ class ProfileSiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd($request);
+
         $request->validate([
             'name' => 'required',
             'alamat' => 'required',
@@ -87,11 +87,12 @@ class ProfileSiswaController extends Controller
            'nomor_hp.max' => 'Maximal 13 karakter',
         ]);
 
-        $siswa = siswa::where('id', $id)->update([
+        siswa::where('id', $id)->update([
             "alamat" => $request["alamat"],
             "nomor_hp" => $request["nomor_hp"],
         ]);
-        $user = User::where('id', $request['user_id'])->update([
+
+        User::where('id', $request['user_id'])->update([
             "name" => $request["name"]
         ]);
 

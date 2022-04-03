@@ -15,14 +15,18 @@
                     <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('profileSiswa.update', $profileSiswa->id) }}" method="post">
+                    <form action="{{ route('profileSiswa.update', $profileSiswa->id) }}" method="post" enctype="multipart/form">
                         @csrf
                         @method('PUT')
                         <div class="card-body">
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="foto">Updload Foto Profil</label>
-                                <input type="file" name="foto" class="form-control-file" id="foto">
-                              </div>
+                                <input type="file" name="foto" class="form-control-file @error('foto') is-invalid @enderror" id="foto">
+
+                                @error('foto')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div> --}}
                             <div class="form-group">
                                 <label for="nis">NIS</label>
                                 <input type="text" name="nis" class="form-control @error('nis') is-invalid @enderror" id="nis" value="{{ old('nis', $profileSiswa->nis) }}" disabled>
